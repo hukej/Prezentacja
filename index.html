@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prezentacja</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>POZYCJONOWANIE ELEMENTÓW</h1>
+    <main>
+      <div id="strzalki">
+        <div id="gornyRzad">
+          <img class="arrow strzalkaL" id="strzalkaL" src="arrow-left.png" alt="strzalka" />
+            <div id="slides-container">
+              <div id="slajd0" class="slajd active">
+                <h1>W CSS</h1>
+                <p class="dol">W CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSSW CSS</p>
+              </div>
+              <div id="slajd1"class="slajd">
+                  <h2>Pozycja relatywna {position: relative}</h2>
+                  <p>Jak przesunac element strony o podana odległość?</p>
+                  <div class="black"><div class="yellow">selektor {</div><div class="blue">position:</div> <div class="orange">relative;</div> <div class="blue">parametry:</div> <div class="green">wartość</div><div class="yellow">}</div></div>
+                  <p>Jako "<b>parametry</b>" należy podać:</p>
+                  <ul>
+                    <li><div class="blue"><b>left:</b></div> <div class="orange"><b>wartość</b></div> - odległość od lewej krawędzi położenia spoczynkowego</li><li><div class="blue"><b>top:</b></div> <div class="orange"><b>wartość</b></div> - odległość od górnej krawędzi położenia spoczynkowego</li>
+                    <li><div class="blue"><b>right:</b></div> <div class="orange"><b>wartość</b></div> - odległość od prawej krawędzi położenia spoczynkowego</li><li><div class="blue"><b>bottom:</b></div> <div class="orange"><b>wartość</b></div> - odległość od dolnej krawędzi położenia spoczynkowego</li>
+                  </ul>
+                  <p>
+                    Wyraz "<b>wartość</b>" oznacza konkretną odległość względem położenia elementu bez używania pozycjonowania. Wartość ujemna oznacza przesunięcie w przeciwną stronę. Można również wpisać auto, co ustali wartość automatyczną. Można łączyć parametry, np. left: 1cm; top: -10px. Należy pamiętać o tym, że parametr left ma pierwszeństwo przed right, natomiast top ma pierwszeństwo przed bottom.<br>
+                    Polecenie pozycjonowania relatywnego (względnego) pozwala przesunąć wybrany element w dowolną stronę względem jego położenia spoczynkowego.
+                  </p>
+                  <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">position:</div> <div class="orange">relative;</div> <div class="blue">bottom:</div> <div class="green">100px;</div><div class="yellow">}</div></div>
+                  <div class="photos"><img src="relative1.png" alt="zdjecie"> <img src="przyklad.png" alt="zdjecie"></div>
+                </div>
+              <div id="slajd2"class="slajd">
+                  <h2>Pozycja absolutna {position: absolute}</h2>
+                  <p>W jaki sposób ustawić dowolny element strony w żądanym miejscu na ekranie?</p>
+                  <div class="black"><div class="yellow">selektor {</div><div class="blue">position:</div> <div class="orange">absolute;</div> <div class="blue">parametry:</div> <div class="green">wartość</div><div class="yellow">}</div></div>
+                  <p>Jako "<b>parametry</b>" należy podać:</p>
+                  <ul>
+                    <li><div class="blue"><b>left:</b></div> <div class="orange"><b>wartość</b></div> - odległość od lewej krawędzi położenia spoczynkowego</li><li><div class="blue"><b>top:</b></div> <div class="orange"><b>wartość</b></div> - odległość od górnej krawędzi położenia spoczynkowego</li>
+                    <li><div class="blue"><b>right:</b></div> <div class="orange"><b>wartość</b></div> - odległość od prawej krawędzi położenia spoczynkowego</li><li><div class="blue"><b>bottom:</b></div> <div class="orange"><b>wartość</b></div> - odległość od dolnej krawędzi położenia spoczynkowego</li>
+                  </ul>
+                  <p>Wyraz "<b>wartość</b>" oznacza konkretną odległość od podanej krawędzi "<b>obejmującego bloku</b>". Wartość ujemna oznacza przesunięcie w przeciwną stronę. Można łączyć parametry, np. left: 1cm; top: -10px.<br> 
+                    Można określić jednocześnie odległości left i right, a także top wspólnie z bottom - pozwoli to rozciągnąć szerokość lub/i wysokość elementu pozycjonowanego. <br>
+                    Blokiem obejmującym w tym przypadku zwykle jest okno przeglądarki lub ramka. Jednak element, który pozycjonujemy znajduje się wewnątrz innego elementu, to położenie jest obliczane względem pozycji tego elementu nadrzędnego, a nie okna przeglądarki.<br>
+                    Polecenie pozycjonowania absolutnego pozwala przesunąć wybrany element w dowolną stronę względem wybranych brzegów strony lub ewentualnie ramki albo "<b>obejmującego bloku</b>" (opis powyżej).
+                    </p>
+                    <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">position:</div> <div class="orange">absolute;</div> <div class="blue">top:</div><div class="green">150px; </div><div class="blue">left:</div><div class="green">50px;</div><div class="yellow">}</div></div>
+                  <div class="photos"><img src="absolute.png" alt="zdjecie"> <img src="przyklad.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd3"class="slajd">
+                <h2>Pozycja ustalona {position: fixed}</h2>
+                <p>Jak ustawić element, aby nie przesuwał się podczas przewijania strony?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">position:</div> <div class="orange">flixed;</div> <div class="blue">parametry:</div> <div class="green">wartość</div><div class="yellow">}</div></div>
+                <p>Jako "<b>parametry</b>" należy podać:</p>
+                  <ul>
+                    <li><div class="blue"><b>left:</b></div> <div class="orange"><b>wartość</b></div> - odległość od lewej krawędzi położenia spoczynkowego</li><li><div class="blue"><b>top:</b></div> <div class="orange"><b>wartość</b></div> - odległość od górnej krawędzi położenia spoczynkowego</li>
+                    <li><div class="blue"><b>right:</b></div> <div class="orange"><b>wartość</b></div> - odległość od prawej krawędzi położenia spoczynkowego</li><li><div class="blue"><b>bottom:</b></div> <div class="orange"><b>wartość</b></div> - odległość od dolnej krawędzi położenia spoczynkowego</li>
+                  </ul>
+                <p>Wyraz "<b>wartość</b>" oznacza konkretną odległość od podanej krawędzi okna przeglądarki.<br>
+                  Polecenie to działa podobnie jak pozycjonowanie absolutne, z tą różnicą, że pozycja elementu jest zawsze obliczana względem krawędzi okna przeglądarki. Dodatkowo element taki jest nieruchomy podczas przewijania strony. Daje to zbliżony efekt, jak nieruchome pojedyncze tło
+                </p>
+                <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">position:</div> <div class="orange">flixed;</div> <div class="blue">top:</div><div class="green">170px; </div><div class="blue">left:</div><div class="green">40px;</div><div class="yellow">}</div></div>
+                <div class="photos"><img src="flixed.png" alt="zdjecie"> <img src="przyklad.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd4" class="slajd">
+                <h2>Pozycja statyczna {position: static}</h2>
+                <p>Jak przywrócić domyślny sposób ustawienia elementu wypozycjonowanego?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">position:</div> <div class="orange">static;</div><div class="yellow">}</div></div>
+                <p>Przywraca normalne pozycjonowanie elementu. Jest to przydatne np. w celu usunięcia ogólnej deklaracji pozycjonowania, umieszczonej w arkuszu stylów. Wystarczy wtedy, dla wybranych elementów strony, umieścić powyższe polecenie w stylu inline. Spowoduje to usunięcie pozycjonowania dla tych elementów, a jednocześnie utrzymanie dla innych (tego samego typu).</p>
+              </div>
+              <div id="slajd5" class="slajd">
+                <h2>Przezroczystość {opacity}</h2>
+                <p>W jaki sposób wstawić na stronie półprzezroczyste warstwy?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">opacity:</div> <div class="green">nieprzeroczystość;</div><div class="yellow">}</div></div>
+                <p>Jako "<b>nieprzezroczystość</b>" należy podać liczbę rzeczywistą z przedziału od 0 (całkowita przezroczystość) do 1 (brak przezroczystości - domyślnie).<br>
+                  Sterując poziomem przezroczystości można wprowadzić na ekran efektowne warstwy imitujące zabarwione szyby. Trzeba jednak pamiętać, że ustalony poziom półprzezroczystości otrzymają wszystkie elementy znajdujące się wewnątrz danego znacznika - nie możemy cofnąć elementom wewnętrznym przezroczystości (tak aby stały się ponownie zupełnie nieprzezroczyste), możemy jedynie ustawić im jeszcze większą przezroczystość w stosunku do półprzezroczystego rodzica.</p>
+                  <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">oparcity:</div> <div class="green">0.5;</div><div class="yellow">}</div></div>
+                <div class="photos"><img src="oparcity.png" alt="zdjecie"> <img src="przyklad.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd6" class="slajd">
+                <h2>Nakładanie {z-index}</h2>
+                <p>W jaki sposób ustawić elementy jeden na drugim? Jak ustawić element za tekstem?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">position:</div> <div class="orange">rodzaj;</div> <div class="blue">parametry:</div> <div class="green">wartość; </div><div class="blue">z-index:</div> <div class="orange">numer</div><div class="yellow">}</div></div>
+                <p>Wyrażenie "<b>position: rodzaj; parametry;</b>" określa typ oraz parametry pozycjonowania (absolutne, relatywne lub ustalone).<br>
+                  Jako "<b>numer</b>" należy wpisać pojedynczą liczbę, określającą, kolejność nakładania pozycjonowanych elementów (element z numerem 1 będzie na samym spodzie - zakryty przez inne).Polecenie to pozwala określić, w jaki sposób mają się nakładać elementy pozycjonowane.<br> Normalnie kolejność nakładania (zakrywania) zależy od kolejności wpisywania elementów w kodzie źródłowym dokumentu. Dzięki z-index możemy to dowolnie zmieniać. Dzięki podaniu np. "<b>z-index: -1</b>", pozycjonowany element nie zakryje tekstu czy innych znaczników, które znajdowały się wcześniej w danym miejscu, lecz zostanie wyświetlony pod nimi.
+                </p>
+                <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.kot {</div><div class="blue">position:</div> <div class="orange">flixed;</div><div class="blue">top:</div> <div class="green">160px;</div><div class="blue">left:</div> <div class="green">40px;</div><div class="blue">z-index:</div> <div class="green">0;</div><div class="yellow">}</div><br>
+                <div class="yellow">.jez {</div><div class="blue">position:</div> <div class="orange">flixed;</div><div class="blue">top:</div> <div class="green">130px;</div><div class="blue">left:</div> <div class="green">20px;</div><div class="blue">z-index:</div> <div class="green">1;</div><div class="yellow">}</div><br>
+                <div class="yellow">.pies {</div><div class="blue">position:</div> <div class="orange">flixed;</div><div class="blue">top:</div> <div class="green">100px;</div><div class="blue">left:</div> <div class="green">0px;</div><div class="blue">z-index:</div> <div class="green">2;</div><div class="yellow">}</div></div>
+                <div class="photos"><img src="index.png" alt="zdjecie"> <img src="przyklad1.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd7" class="slajd">
+                <h2>Obcinanie {clip}</h2>
+                <p>W jaki sposób automatycznie przyciąć do określonych rozmiarów obrazek (grafikę, zdjęcie) lub inny element strony?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">position:</div> <div class="orange">absolute;</div> <div class="blue">clip:</div> <div class="yellow">rect</div><div class="purple">(<div class="green">góra prawo dół lewo</div>)</div><div class="yellow">}</div></div>
+                <p>Wyrażenia: "<b>góra, prawo, dół, lewo</b>" oznaczają wartości współrzędnych wyciętego prostokąta, określane względem lewego-górnego narożnika elementu, tzn. są to pozycje odpowiednio: górnego-prawego oraz dolnego-lewego wierzchołka wyciętego prostokąta.<br> 
+                  Zamiast całego wyrażenia rect(góra, prawo, dół, lewo) można również podać auto - wartość automatyczna.<br>
+                  Specyfikacja CSS 2 wprowadziła dość poważne zamieszanie, jeżeli chodzi o składnię tego polecenia. Sposób ustalania krawędzi prostokąta cięcia został zupełnie zmieniony w CSS 2.1, ponieważ żadna przeglądarka - nie interpretowała wcześniejszej propozycji, to jeszcze na dodatek CSS 2 niejednoznacznie określiła, jakimi separatorami powinny być rozdzielone wartości w nawiasie rect(...). CSS 2.1 mówi wyraźnie: każda przeglądarka musi obsługiwać jako separator znak przecinka, ale dodatkowo może przyjmować samą spację.
+                </p>
+                <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez{</div><div class="blue">position:</div> <div class="orange">absolute;</div> <div class="blue">clip:</div> <div class="yellow">rect</div><div class="purple">(<div class="green">5px, 200px, 200px, 10px</div>)</div><div class="yellow">}</div></div>
+                <div class="photos"><img src="clip.png" alt="zdjecie"> <img src="przyklad.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd8" class="slajd">
+                <h2>Wyświetlanie {display}</h2>
+                <p>Jak ukryć dowolny element strony? W jaki sposób zmienić domyśle wyświetlanie dowolnych elementów strony, tak aby stały się wykazem czy tabelką?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">display:</div> <div class="orange">sposób;</div><div class="yellow">}</div></div>
+                <p>Jako "<b>sposób</b>" należy podać:</p>
+                <ul>
+                  <li><div class="orange"><b>block</b></div> - element będzie wyświetlony w bloku (odstęp z góry i z dołu)</li><li><div class="orange"><b>inline</b></div> - element będzie wyświetlony w linii (sąsiadująco z innymi)</li><li><div class="orange"><b>list-item</b></div> - element wykazu: &#60li&#62...&#60/li&#62</li>
+                  <li><div class="orange"><b>none</b></div> - element nie będzie wyświetlany</li><li><div class="orange"><b>inline-block</b></div> - element zachowuje się podobnie jak element zastępowany</li>
+                </ul>
+                <p>Polecenie to pozwala określić sposób, w jaki będzie wyświetlony na ekranie dany element. Dzięki poleceniu "<b>display: inline</b>" możliwe jest ustawienie dwóch sąsiednich tytułów w jednej linii.<br>
+                  Natomiast użycie "<b>display: list-item</b>" okazuje się przydatne w stosunku do elementu wykazu, kiedy chcemy przywrócić normalny sposób jego wyświetlania, nie zmieniając jednocześnie wyświetlania dla innych elementów &#60li&#62...&#60/li&#62. Można w ten sposób również tworzyć punkty wykazu z innych znaczników niż &#60li&#62...&#60/li&#62</p>
+              </div>
+              <div id="slajd9" class="slajd">
+                <h2>Widzialność {visibility}</h2>
+                <p>W jaki sposób schować element, tak aby pozostało po nim puste miejsce?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">visibility:</div> <div class="orange">typ;</div><div class="yellow">}</div></div>
+                <p>Jako "<b>typ</b>" należy podać:</p>
+                <ul>
+                  <li><div class="orange"><b>visible</b></div> - element będzie widoczny na ekranie (domyślnie)</li><li><div class="orange"><b>hidden</b></div> - element zostanie ukryty, a w jego miejsce pojawi się pusta przestrzeń o takich samych rozmiarach jak element (gdyby był widoczny)</li>
+                  <li><div class="orange"><b>collapse</b></div> - jeżeli użyte dla wierszy (&#60tr&#62...&#60/tr&#62), grup wierszy (&#60tbody&#62...&#60/tbody&#62), kolumn (&#60col&#62) lub grup kolumn (&#60colgroup&#62...&#60/colgroup&#62) tabeli, ukrywa całą zawartość wiersza (wierszy) bądź kolumny (kolumn), bez konieczności obliczania na nowo rozplanowania tabeli. Dla innych elementów działa tak samo jak wartość hidden.</li>
+                </ul>
+                <p>Polecenie "<b>visibility: hidden</b>" jest zbliżone do display: none. Różnica polega na tym, że drugie z nich całkowicie usuwa element z ekranu, natomiast pierwsze tylko go ukrywa - w miejscu gdzie miał być wyświetlony, jest widoczne puste miejsce.<br>
+                  W przypadku zastosowania "<b>visibility: collapse</b>" dla elementów tabeli, Opera, Chrome i Konqueror usuwają tak oznaczone elementy, ale pozostawiają po nich pustą przestrzeń. Opera, Firefox i MSIE w takim przypadku usuwają całą wolną przestrzeń. W założeniu ma to być przydatne do realizacji wszelkiego rodzaju dynamicznych efektów ukrywania fragmentów tabeli (np. za pomocą JavaScript).
+                </p>
+                <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">visibility:</div> <div class="orange">hidden;</div><div class="yellow">}</div></div>
+                <div class="photos"><img src="visibility.png" alt="zdjecie"> <img src="przyklad1.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd10" class="slajd">
+                <h2>Ustawienie {float, vertical-align}</h2>
+                <p>Jak ustawić obrazek (grafikę, zdjęcie) lub dowolny inny element po lewej bądź po prawej stronie tekstu? Jak ustawić element na górze, na środku lub na dole innego elementu? Jak stworzyć indeks górny i dolny za pomocą CSS?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">float:</div> <div class="orange">sposób;</div><div class="yellow">}</div></div>
+                <p>Jako "<b>sposób</b>" należy podać:</p>
+                <ul>
+                  <li><div class="orange"><b>left</b></div> - element ustawiony po lewej stronie, względem elementów sąsiadujących</li><li><div class="orange"><b>right</b></div> - element ustawiony po prawej stronie, względem elementów sąsiadujących</li><li><div class="orange"><b>none</b></div> - element nie sąsiaduje z innymi</li>
+                </ul>
+                <p>Polecenie pozwala zdefiniować ustawienie danego elementu względem elementów, które z nim sąsiadują. Dzięki temu możemy ustalić sposób "<b>oblewania</b>" tekstem elementu pływającego (np. obrazka).</p>
+                <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">float:</div> <div class="orange">right;</div><div class="yellow">}</div></div>
+                <div class="photos"><img id="float" src="float.png" alt="zdjecie"> <img src="przyklad.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd11" class="slajd">
+                <h2>Przyleganie {clear}</h2>
+                <p>Jak zabezpieczyć się przed nieestetycznym przyleganiem dwóch elementów oblewanych tekstem (np. obrazki)? W jaki sposób nie dopuścić, aby obok tekstu znajdował się obrazek ani inny element?</p>
+                <div class="black"><div class="yellow">selektor {</div><div class="blue">clear:</div> <div class="orange">sposób;</div><div class="yellow">}</div></div>
+                <p>Jako "<b>sposób</b>" należy podać:</p>
+                <ul>
+                  <li><div class="orange"><b>left</b></div> - lewy bok elementu nie przylega do poprzedzającego elementu pływającego</li><li><div class="orange"><b>right</b></div> - prawy bok nie przylega</li><li><div class="orange"><b>both</b></div> - żaden bok nie przylega</li><li><div class="orange"><b>none</b></div>- brak ograniczeń</li>
+                </ul>
+                <p>Polecenie pozwala ustalić pozycję elementów sąsiadujących względem elementu pływającego (np. obrazka). Określa które krawędzie elementu następującego po elemencie pływającym nie będą do niego przylegać.<br>
+                  Na przykład umieszczamy na stronie opis poparty odpowiednimi ilustracjami, które mają być ułożone po prawej stronie względem otaczającego tekstu. Jeśli w kodzie źródłowym umieścimy obrazki zbyt blisko siebie, nie zostaną one ułożone jeden pod drugim - lecz obok siebie. Co więcej, ułożenie będzie zależało od rozdzielczości ekranu i rozmiarów okna przeglądarki. Aby pozbyć się tych niedogodności wystarczy dla obrazków określić dodatkowo deklarację: <b>clear: right.</b>
+                </p>
+                <h2>Przykładowy wynik kodu: </h2><div class="black"><div class="yellow">.jez {</div><div class="blue">float:</div> <div class="orange">left; </div><div class="blue">clear:</div> <div class="orange">left;</div><div class="yellow">}</div><br>
+                <div class="yellow">p {</div><div class="blue">clear:</div> <div class="orange">left;</div><div class="yellow">}</div></div>
+                <div class="photos"><img src="clear.png" alt="zdjecie"></div>
+              </div>
+              <div id="slajd12" class="slajd">
+                <div class="white"><p>Szymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej GocSzymon Nowak i Bartłomiej Goc</p></div>
+                <h1>KONIEC!!!</h1>
+                <div class="margin">
+                <h2>Prezentacje przygotowali:</h2>
+                <p>Szymon Nowak i Bartłomiej Goc</p>
+                </div>
+              </div>
+            </div>
+          <img class="arrow strzalkaP" id="strzalkaP" src="arrow-right.png" alt="strzalka" />
+        </div>
+        <div id="dolnyRzad">
+          <div id="kropki">
+            <div id='kr0' class="kr"></div>
+            <div id='kr1' class="kr"></div>
+            <div id='kr2' class="kr"></div>
+            <div id='kr3' class="kr"></div>
+            <div id='kr4' class="kr"></div>
+            <div id='kr5' class="kr"></div>
+            <div id='kr6' class="kr"></div>
+            <div id='kr7' class="kr"></div>
+            <div id='kr8' class="kr"></div>
+            <div id='kr9' class="kr"></div>
+            <div id='kr10' class="kr"></div>
+            <div id='kr11' class="kr"></div>
+            <div id='kr12' class="kr"></div>
+          </div>
+        </div>
+      </div> 
+    <main>
+    <script src="script.js"></script>
+  </body>
+</html>
